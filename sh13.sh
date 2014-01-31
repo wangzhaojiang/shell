@@ -7,8 +7,14 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:
 export PATH
 
-while [ "$yn" != "yes" -a "$yn" !=  "YES" ]
+#while [ "$yn" != "yes" -a "$yn" !=  "YES" ]
+#do
+#	read -p "input yes/YES to stop this program : " yn
+#done
+#echo "OK! you input the correct answer"
+
+until [ "$yn" == "yes" -o "$yn" == "YES" ]
 do
-	read -p "input yes/YES to stop this program : " yn
+	read -p "input the yes/YES to stop this program: " yn
 done
 echo "OK! you input the correct answer"
