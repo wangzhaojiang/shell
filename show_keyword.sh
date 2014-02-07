@@ -6,6 +6,12 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:
 export PATH
 
+if [ "$#" -lt 2 ];then
+	echo -e "please enter norms "
+	echo -e "[sh show_keyword.sh /file /keywords] \n"
+	exit 0
+fi
+
 num=$(cat $1 | grep -n $2 )
 num=$(echo $num | grep -Eo '[0-9]+')
 echo $num
